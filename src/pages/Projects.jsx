@@ -10,7 +10,7 @@ export default function Projects() {
       <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
         🚀 My Projects
       </h2>
-      <p className="text-gray-600 dark:text-gray-300 mt-2">
+      <p className="text-black-900 dark:text-gray-300 mt-2">
         Some of the projects I have worked on.
       </p>
 
@@ -24,7 +24,7 @@ export default function Projects() {
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">
               {project.title}
             </h3>
-            <p className="text-gray-600 dark:text-gray-300 mt-2">
+            <p className="text-black-900 dark:text-gray-300 mt-2">
               {project.description}
             </p>
 

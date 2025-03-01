@@ -16,11 +16,11 @@ export default function Contact() {
       <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
         📞 Let's Connect!
       </h2>
-      <p className="text-gray-600 dark:text-gray-300 mt-2">
+      <p className="text-black-900 dark:text-gray-300 mt-2">
         Feel free to reach out to me via any of the channels below.
       </p>
 
-      {/* 📌 Contact Info Card */}
+      {/* Contact Info Card */}
       <div className="bg-white/10 backdrop-blur-lg p-8 rounded-lg shadow-lg border border-white/20 mt-6 w-full max-w-lg">
         <div className="space-y-6 text-lg text-gray-800 dark:text-white">
           {/* 📧 Email */}
@@ -34,7 +34,7 @@ export default function Contact() {
             </a>
           </div>
 
-          {/* 📞 Phone */}
+          {/* Phone */}
           <div className="flex items-center space-x-3 hover:scale-105 transition">
             <FaPhone className="text-green-500 text-2xl" />
             <span>{contactInfo.phone}</span>

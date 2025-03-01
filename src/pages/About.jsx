@@ -13,18 +13,18 @@ export default function About() {
       </p>
 
       {/* Summary Section */}
-      <div className="max-w-3xl mt-6 text-gray-700 dark:text-gray-300 leading-relaxed">
+      <div className="max-w-3xl mt-6 text-black-900 dark:text-gray-300 leading-relaxed">
         <p>
-          I am a **highly motivated developer** with experience in **Kotlin,
-          Firebase, React, and Machine Learning**. My passion lies in **building
-          scalable applications**, optimizing user experiences, and leveraging
-          modern technologies to **solve complex problems efficiently**.
+          I am a final-year student passionate about programming, specializing
+          in Android development with skills in Java, Kotlin, and Python..
+          Additionally, I have experience with web technologies, including HTML,
+          CSS, JavaScript, and React. My major project involves building a
+          grammar error detection tool using machine learning, which is
+          integrated into an Android app.
         </p>
         <p className="mt-4">
-          I thrive on challenges and **continuously explore emerging
-          technologies** to deliver impactful solutions. My expertise spans
-          **full-stack development**, cloud-based applications, and AI-powered
-          features.
+          I thrive on challenges and continuously explore emerging technologies
+          to deliver impactful solutions.
         </p>
       </div>
 
@@ -41,7 +41,7 @@ export default function About() {
             { name: "React", emoji: "⚛️" },
             { name: "Firebase", emoji: "🔥" },
             { name: "SQL", emoji: "💾" },
-            { name: "Machine Learning", emoji: "🤖" },
+            { name: "Html Css", emoji: "🌐" },
             { name: "Android Studio", emoji: "📲" },
             { name: "Tailwind CSS", emoji: "🎨" },
             { name: "Git/GitHub", emoji: "🐙" },
