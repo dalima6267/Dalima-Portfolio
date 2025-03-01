@@ -6,14 +6,9 @@ export default function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
   const [scrolling, setScrolling] = useState(false);
 
-  // Change navbar background on scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
+      setScrolling(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -27,7 +22,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-white">Dalima Sahu</h1>
+        <h1 className="text-2xl font-bold text-white">𝔇𝔞𝔩𝔦𝔪𝔞 𝔖𝔞𝔥𝔲</h1>
 
         {/* Navigation Links */}
         <ul className="flex space-x-10 text-white absolute left-1/2 transform -translate-x-1/2">

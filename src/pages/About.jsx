@@ -36,15 +36,15 @@ export default function About() {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4 max-w-4xl mx-auto">
           {[
             { name: "Kotlin", emoji: "📱" },
-            { name: "Java", emoji: "☕" },
+            { name: "Java", emoji: "♨️" },
             { name: "Python", emoji: "🐍" },
             { name: "React", emoji: "⚛️" },
             { name: "Firebase", emoji: "🔥" },
             { name: "SQL", emoji: "💾" },
-            { name: "Html Css", emoji: "🌐" },
+            { name: "Html Css", emoji: "</>" },
             { name: "Android Studio", emoji: "📲" },
             { name: "Tailwind CSS", emoji: "🎨" },
-            { name: "Git/GitHub", emoji: "🐙" },
+            { name: "Git/GitHub", emoji: "😺" },
             { name: "REST API", emoji: "🔗" },
             { name: "UI/UX Design", emoji: "🎭" },
           ].map((skill, index) => (
@@ -62,7 +62,7 @@ export default function About() {
       {/* Download Resume Button */}
       <div className="mt-8">
         <a
-          href="/Dalima_Sahu_Resume.pdf"
+          href="https://drive.google.com/drive/folders/1bRZeT08mDFBswkNYdfYXPUSs8HZiY4GN?usp=sharing"
           download="Dalima_Sahu_Resume.pdf"
           className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition transform hover:scale-105"
         >

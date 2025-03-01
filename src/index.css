@@ -1,6 +1,12 @@
 @import "tailwindcss";
-/* Animated Gradient Background */
 
+/* Hide Scrollbar Completely */
+html,
+body {
+  overflow: hidden;
+}
+
+/* Animated Gradient Background */
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
@@ -17,21 +23,34 @@
   background: linear-gradient(-45deg, #ff758c, #ff7eb3, #c2e9fb, #a1c4fd);
   background-size: 400% 400%;
   animation: gradientAnimation 12s ease infinite;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
-  overflow: hidden;
 }
 
-/* Floating Bubbles Effect */
+/* Floating Bubbles Container */
+.bubble-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Ensure no interaction with bubbles */
+  z-index: 0; /* Make sure bubbles are above the background */
+  overflow: visible;
+}
+
+/* Floating Bubbles Animation */
 @keyframes float {
   0% {
     transform: translateY(0px) scale(1);
     opacity: 1;
   }
   50% {
-    transform: translateY(-100px) scale(1.2);
+    transform: translateY(-150px) scale(1.2);
     opacity: 0.8;
   }
   100% {
@@ -40,41 +59,48 @@
   }
 }
 
+/* Bubble Styling */
 .bubble {
   position: absolute;
-  bottom: -10px;
-  background: rgba(255, 255, 255, 0.2);
+  top: 100vh; /* Start off-screen */
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  animation: float 10s infinite ease-in-out alternate;
+  animation: float infinite ease-in-out alternate;
 }
 
+/* Individual Bubble Settings */
 .bubble:nth-child(1) {
   width: 40px;
   height: 40px;
   left: 10%;
-  animation-duration: 8s;
+  animation-duration: 6s;
 }
 .bubble:nth-child(2) {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   left: 30%;
-  animation-duration: 12s;
+  animation-duration: 10s;
 }
 .bubble:nth-child(3) {
-  width: 30px;
-  height: 30px;
-  left: 50%;
-  animation-duration: 7s;
-}
-.bubble:nth-child(4) {
-  width: 80px;
-  height: 80px;
-  left: 70%;
-  animation-duration: 15s;
-}
-.bubble:nth-child(5) {
   width: 50px;
   height: 50px;
-  left: 90%;
-  animation-duration: 10s;
+  left: 50%;
+  animation-duration: 8s;
+}
+.bubble:nth-child(4) {
+  width: 90px;
+  height: 90px;
+  left: 70%;
+  animation-duration: 12s;
+}
+.bubble:nth-child(5) {
+  width: 60px;
+  height: 60px;
+  left: 85%;
+  animation-duration: 9s;
+}
+
+/* Performance Optimization */
+* {
+  will-change: transform, opacity;
 }

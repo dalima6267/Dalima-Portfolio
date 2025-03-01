@@ -4,14 +4,13 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import "./index.css"; // Ensure the background CSS is included
+import "./index.css"; // Include styles
 
 export default function App() {
   return (
     <Router>
-      <div className="relative min-h-screen">
-        {/* Animated Background */}
-
+      <div className="relative min-h-screen overflow-hidden">
+        {/* Background */}
         <div className="animated-background"></div>
 
         {/* Floating Bubbles */}
