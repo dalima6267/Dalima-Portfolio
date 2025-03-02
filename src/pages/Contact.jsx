@@ -11,18 +11,16 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col items-center justify-center bg-transparent dark:bg-gray-900 px-6 py-12"
+      className="min-h-screen flex flex-col items-center justify-center bg-transparentpx-6 py-12"
     >
-      <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-        📞 Let's Connect!
-      </h2>
-      <p className="text-black-900 dark:text-gray-300 mt-2">
+      <h2 className="text-4xl font-bold text-gray-900">📞 Let's Connect!</h2>
+      <p className="text-black-900 mt-2">
         Feel free to reach out to me via any of the channels below.
       </p>
 
       {/* Contact Info Card */}
       <div className="bg-white/10 backdrop-blur-lg p-8 rounded-lg shadow-lg border border-white/20 mt-6 w-full max-w-lg">
-        <div className="space-y-6 text-lg text-gray-800 dark:text-white">
+        <div className="space-y-6 text-lg text-gray-800">
           {/* 📧 Email */}
           <div className="flex items-center space-x-3 hover:scale-105 transition">
             <FaEnvelope className="text-blue-500 text-2xl" />
@@ -63,7 +61,7 @@ export default function Contact() {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-3xl p-3 rounded-full bg-white/10 backdrop-blur-lg border border-white/20 text-gray-700 dark:text-white hover:text-blue-500 hover:scale-110 transition"
+              className="text-3xl p-3 rounded-full bg-white/10 backdrop-blur-lg border border-white/20 text-gray-700 hover:text-blue-500 hover:scale-110 transition"
             >
               <IconComponent />
             </a>

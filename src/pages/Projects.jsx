@@ -5,12 +5,10 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col items-center justify-center bg-transparent dark:bg-gray-900 px-6 py-12"
+      className="min-h-screen flex flex-col items-center justify-center bg-transparent px-6 py-12"
     >
-      <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-        🚀 My Projects
-      </h2>
-      <p className="text-black-900 dark:text-gray-300 mt-2">
+      <h2 className="text-4xl font-bold text-gray-900">🚀 My Projects</h2>
+      <p className="text-black-900 mt-2">
         Some of the projects I have worked on.
       </p>
 
@@ -18,15 +16,11 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition"
+            className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition"
           >
             {/* Project Title */}
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-              {project.title}
-            </h3>
-            <p className="text-black-900 dark:text-gray-300 mt-2">
-              {project.description}
-            </p>
+            <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
+            <p className="text-black-900 mt-2">{project.description}</p>
 
             {/* Tech Stack Badges */}
             <div className="flex flex-wrap gap-2 mt-4">

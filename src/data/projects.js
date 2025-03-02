@@ -6,6 +6,14 @@ export const projects = [
     techStack: ["📱 Kotlin", "🔥 Firebase", "💾 SQL"],
     github: "https://github.com/dalima6267/BillMate.git",
     liveDemo: "",
+    images: [
+      "/images/image1.png",
+      "/images/image2.png",
+      "/images/image3.png",
+      "/images/image4.png",
+      "/images/image5.png",
+      "/images/image6.png",
+    ],
   },
   {
     title: "📸 Instagram Clone",
