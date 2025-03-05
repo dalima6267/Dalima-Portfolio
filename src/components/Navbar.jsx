@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [scrolling, setScrolling] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // State for mobile menu
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,8 +33,16 @@ export default function Navbar() {
           Dalima Sahu
         </Link>
 
-        {/* Navigation Links */}
-        <ul className="flex space-x-10 text-white absolute left-1/2 transform -translate-x-1/2">
+        {/* Hamburger Menu for Small Screens */}
+        <button
+          className="md:hidden text-white text-2xl focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? "✖" : "☰"} {/* Toggle between close (✖) and menu (☰) */}
+        </button>
+
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex space-x-10 text-white">
           {[
             { path: "/", title: "Home" },
             { path: "/about", title: "About" },
@@ -52,6 +61,28 @@ export default function Navbar() {
           ))}
         </ul>
       </div>
+
+      {/* Mobile Menu (Hidden by default) */}
+      {menuOpen && (
+        <ul className="md:hidden flex flex-col items-center bg-gray-900 text-white space-y-4 py-4">
+          {[
+            { path: "/", title: "Home" },
+            { path: "/about", title: "About" },
+            { path: "/projects", title: "Projects" },
+            { path: "/contact", title: "Contact" },
+          ].map((item, index) => (
+            <li key={index}>
+              <Link
+                to={item.path}
+                className="block py-2 px-4 text-lg hover:bg-gray-700 w-full text-center"
+                onClick={() => setMenuOpen(false)} // Close menu after clicking a link
+              >
+                {item.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 }
