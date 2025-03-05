@@ -20,11 +20,16 @@ export default function Navbar() {
     >
       <div className="container mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap"
+          rel="stylesheet"
+        />
         <Link
           to="/"
           className="text-2xl font-bold text-white hover:text-blue-400 transition duration-300"
+          style={{ fontFamily: "'UnifrakturMaguntia', cursive" }}
         >
-          𝔇𝔞𝔩𝔦𝔪𝔞 𝔖𝔞𝔥𝔲
+          Dalima Sahu
         </Link>
 
         {/* Navigation Links */}
