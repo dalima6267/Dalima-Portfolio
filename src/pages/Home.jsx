@@ -41,16 +41,16 @@ export default function Home() {
 
       {/* Buttons */}
       <div className="mt-6 flex space-x-4">
-        <Link to="/projects">
+        <a href="#projects">
           <button className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-400 transition">
             View Projects
           </button>
-        </Link>
-        <Link to="/contact">
+        </a>
+        <a href="#contact">
           <button className="bg-gray-700 text-white px-6 py-2 rounded-lg hover:bg-gray-600 transition">
             Contact Me
           </button>
-        </Link>
+        </a>
       </div>
     </section>
   );

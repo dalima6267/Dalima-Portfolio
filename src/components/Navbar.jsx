@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [scrolling, setScrolling] = useState(false);
@@ -25,13 +24,13 @@ export default function Navbar() {
           href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap"
           rel="stylesheet"
         />
-        <Link
-          to="/"
+        <a
+          href="#home"
           className="text-2xl font-bold text-white hover:text-blue-400 transition duration-300"
           style={{ fontFamily: "'UnifrakturMaguntia', cursive" }}
         >
           Dalima Sahu
-        </Link>
+        </a>
 
         {/* Hamburger Menu for Small Screens */}
         <button
@@ -44,19 +43,19 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-10 text-white">
           {[
-            { path: "/", title: "Home" },
-            { path: "/about", title: "About" },
-            { path: "/projects", title: "Projects" },
-            { path: "/contact", title: "Contact" },
+            { path: "#home", title: "Home" },
+            { path: "#about", title: "About" },
+            { path: "#projects", title: "Projects" },
+            { path: "#contact", title: "Contact" },
           ].map((item, index) => (
             <li key={index}>
-              <Link
-                to={item.path}
+              <a
+                href={item.path}
                 className="relative hover:text-blue-400 transition duration-300"
               >
                 {item.title}
                 <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-400 transition-all duration-300 hover:w-full"></span>
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
@@ -66,19 +65,19 @@ export default function Navbar() {
       {menuOpen && (
         <ul className="md:hidden flex flex-col items-center bg-gray-900 text-white space-y-4 py-4">
           {[
-            { path: "/", title: "Home" },
-            { path: "/about", title: "About" },
-            { path: "/projects", title: "Projects" },
-            { path: "/contact", title: "Contact" },
+            { path: "#home", title: "Home" },
+            { path: "#about", title: "About" },
+            { path: "#projects", title: "Projects" },
+            { path: "#contact", title: "Contact" },
           ].map((item, index) => (
             <li key={index}>
-              <Link
-                to={item.path}
+              <a
+                href={item.path}
                 className="block py-2 px-4 text-lg hover:bg-gray-700 w-full text-center"
                 onClick={() => setMenuOpen(false)} // Close menu after clicking a link
               >
                 {item.title}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>

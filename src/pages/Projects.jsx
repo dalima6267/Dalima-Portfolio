@@ -45,12 +45,21 @@ export default function Projects() {
         Some of the projects I have worked on.
       </p>
 
-      <div className="grid md:grid-cols-3 gap-6 mt-8">
+      {/* Projects Grid */}
+      <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-10 mt-12">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition"
+            className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1"
           >
+            {/* Project Image */}
+            <div className="w-full h-48 overflow-hidden rounded-lg">
+              <img
+                src={project.thumbnail || project.images[0]}
+                alt={project.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
             {/* Project Title */}
             <h3 className="text-xl font-bold text-gray-900">{project.title}</h3>
             <p className="text-black-900 mt-2">{project.description}</p>
@@ -67,14 +76,13 @@ export default function Projects() {
               ))}
             </div>
 
-            {/* Action Buttons */}
             <div className="flex mt-4 space-x-4">
               {/* GitHub Link */}
               <a
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center bg-gray-700 text-white px-4 py-2 rounded-md hover:bg-gray-600 transition"
+                className="flex items-center bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition"
               >
                 <FaGithub className="mr-2" /> GitHub
               </a>

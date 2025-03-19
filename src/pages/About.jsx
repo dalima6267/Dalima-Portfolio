@@ -11,7 +11,7 @@ export default function About() {
       </p>
 
       {/* Summary Section */}
-      <div className="max-w-3xl mt-4 text-black-9 leading-relaxed text-sm sm:text-base">
+      <div className="max-w-5xl mt-4 text-black-9 leading-relaxed text-sm sm:text-base">
         <p>
           I am a final-year student passionate about programming, specializing
           in Android development with skills in Java, Kotlin, and Python.
@@ -25,6 +25,7 @@ export default function About() {
           to deliver impactful solutions.
         </p>
       </div>
+      <div className="mt-2 text-xl font-bold text-gray-800">Education</div>
 
       {/* Skills & Technologies */}
       <div className="mt-6 w-full">

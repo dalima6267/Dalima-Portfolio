@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
-/* Hide Scrollbar Completely */
+/* Hide Horizontal Scroll, Allow Vertical Scroll */
 html,
 body {
-  overflow: hidden;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /* Animated Gradient Background */
@@ -27,7 +28,7 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   z-index: -1;
 }
 
@@ -39,22 +40,22 @@ body {
   top: 0;
   left: 0;
   pointer-events: none; /* Ensure no interaction with bubbles */
-  z-index: 0; /* Make sure bubbles are above the background */
-  overflow: visible;
+  z-index: 0; /* Ensure bubbles are above the background */
+  overflow: hidden; /* Prevent bubbles from showing outside the viewport */
 }
 
 /* Floating Bubbles Animation */
 @keyframes float {
   0% {
-    transform: translateY(0px) scale(1);
-    opacity: 1;
+    transform: translateY(100vh) scale(0.8);
+    opacity: 0;
   }
   50% {
-    transform: translateY(-150px) scale(1.2);
-    opacity: 0.8;
+    transform: translateY(-50px) scale(1.1);
+    opacity: 0.7;
   }
   100% {
-    transform: translateY(0px) scale(1);
+    transform: translateY(-150px) scale(1);
     opacity: 1;
   }
 }
@@ -62,7 +63,6 @@ body {
 /* Bubble Styling */
 .bubble {
   position: absolute;
-  top: 100vh; /* Start off-screen */
   background: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   animation: float infinite ease-in-out alternate;
@@ -98,6 +98,35 @@ body {
   height: 60px;
   left: 85%;
   animation-duration: 9s;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .bubble:nth-child(1) {
+    width: 25px;
+    height: 25px;
+    animation-duration: 5s;
+  }
+  .bubble:nth-child(2) {
+    width: 50px;
+    height: 50px;
+    animation-duration: 7s;
+  }
+  .bubble:nth-child(3) {
+    width: 40px;
+    height: 40px;
+    animation-duration: 6s;
+  }
+  .bubble:nth-child(4) {
+    width: 70px;
+    height: 70px;
+    animation-duration: 10s;
+  }
+  .bubble:nth-child(5) {
+    width: 50px;
+    height: 50px;
+    animation-duration: 8s;
+  }
 }
 
 /* Performance Optimization */
